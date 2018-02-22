@@ -1,0 +1,14 @@
+version: '2'
+services:
+  discovery:
+    image: xvjialing/eureka-server
+    ports:
+      - "8761:8761"
+  client:
+    image: xvjialing/eureka-client
+    ports:
+      - "8081:8081"
+    links:
+      - discovery
+    depends_on:
+      - discovery

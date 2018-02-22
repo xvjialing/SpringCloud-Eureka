@@ -1,0 +1,10 @@
+eureka:
+  instance:
+    hostname: eureka-client
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://discovery:8761/eureka/
+server:
+  port: 8081
